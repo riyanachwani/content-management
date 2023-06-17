@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Content Management Tool</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .input-section {
+      margin-bottom: 20px;
+    }
+
+    .input-section label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .input-section input[type="text"],
+    .input-section input[type="file"] {
+      width: 100%;
+      padding: 5px;
+    }
+
+    .button-section {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .button-section button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+
+    .data-container {
+      max-height: 300px;
+      /* Adjust the height as needed */
+      overflow-y: auto;
+    }
+
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .card-header {
+      background-color: #f0f0f0;
+      padding: 10px;
+      border-radius: 6px;
+    }
+
+    .card-title {
+      margin: 0;
+    }
+
+    .card-body {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Content Management Tool</h1>
+
+  <div class="input-section">
+    <label for="title">Title:</label>
+    <input type="text" id="title" placeholder="Enter title">
+  </div>
+
+  <div class="input-section">
+    <label for="content">Content:</label>
+    <input type="text" id="content" placeholder="Enter content">
+  </div>
+
+  <div class="input-section">
+    <label for="image">Image:</label>
+    <input type="file" id="image" accept="image/*">
+  </div>
+
+  <div class="input-section">
+    <label for="video">Video:</label>
+    <input type="file" id="video" accept="video/*">
+  </div>
+
+  <div class="button-section">
+    <button onclick="submitForm()">Submit</button>
+  </div>
+
+  <div class="data-container">
+    <div class="data-section" id="dataSection">
+    </div>
+  </div>
+
+  <script>
+    function submitForm() {
+      var title = document.getElementById('title').value;
+      var content = document.getElementById('content').value;
+      var image = document.getElementById('image').files[0];
+      var video = document.getElementById('video').files[0];
+
+      var dataSection = document.getElementById('dataSection');
+
+      var newData = "<div class='card'>" +
+        "<div class='card-header'>" +
+        "<h3 class='card-title'>Title: " + title + "</h3>" +
+        "</div>" +
+        "<div class='card-body'>" +
+        "<p>Content: " + content + "</p>";
+
+      if (image) {
+        var imagePreview = document.createElement('img');
+        imagePreview.src = URL.createObjectURL(image);
+        imagePreview.style.maxWidth = '100%';
+        imagePreview.style.height = 'auto';
+        imagePreview.style.marginTop = '10px';
+        newData += "<p>Image:</p>";
+        newData += "<div class='card-body-image'>" +
+          "<img src='" + imagePreview.src + "' alt='Selected Image'>" +
+          "</div>";
+      }
+
+      if (video) {
+        var videoPreview = document.createElement('video');
+        videoPreview.src = URL.createObjectURL(video);
+        videoPreview.controls = true;
+        videoPreview.autoplay = true;
+        videoPreview.style.maxWidth = '100%';
+        videoPreview.style.height = 'auto';
+        videoPreview.style.marginTop = '20px';
+        newData += "<p>Video:</p>";
+        newData += "<div class='card-body-video'>" +
+          "<video src='" + videoPreview.src + "' controls autoplay></video>" +
+          "</div>";
+      }
+
+      newData += "</div></div>";
+
+      dataSection.innerHTML += newData;
+
+      document.getElementById('title').value = '';
+      document.getElementById('content').value = '';
+      document.getElementById('image').value = '';
+      document.getElementById('video').value = '';
+    }
+  </script>
+</body>
+
+</html>
