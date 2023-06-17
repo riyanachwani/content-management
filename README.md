@@ -1,4 +1,7 @@
-# Content Management Tool
+<h1 align="center">
+  <a href="# Content Management Tool"></a>
+  Content Management Tool
+</h1>
 
 # Project Title
 <br>
