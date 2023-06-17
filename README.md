@@ -1,4 +1,4 @@
-# <center>Content Management Tool</center>
+# Content Management Tool
 
 # Project Title
 <br>
