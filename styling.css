@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: lightskyblue;
+    overflow-y: scroll;
 }
 
 h1 {
@@ -10,6 +11,29 @@ h1 {
 
 .input-section {
     margin-bottom: 20px;
+    width: 37cm;
+}
+
+
+.label-section {
+    text-decoration: wavy;
+    font-size: 0.5cm;
+}
+
+.div-section {
+    height: 1cm;
+    border-radius: 8px;
+    margin: 0.5cm;
+}
+
+.preview {
+    width: 15cm;
+    height: 15cm;
+}
+
+.video-preview {
+    width: 15cm;
+    height: auto;
 }
 
 .input-section label {
@@ -26,6 +50,7 @@ h1 {
 .button-section {
     text-align: center;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .button-section button {
@@ -36,16 +61,14 @@ h1 {
 .data-container {
     max-height: 300px;
     /* Adjust the height as needed */
-    overflow-y: auto;
 }
 
 .card {
-    border: 1px solid #ccc;
+    border: 1px solid grey;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin-bottom: 20px;
-    height: 15cm;
 }
 
 .card-header {

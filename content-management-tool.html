@@ -9,26 +9,28 @@
 <body>
   <h1>Content Management Tool</h1>
 
+  <div class="card">
   <div class="input-section">
-    <label for="title">Title:</label>
-    <input type="text" id="title" placeholder="Enter title">
+    <label class="label-section" for="title">Title:</label>
+    <input class="div-section" type="text" id="title" placeholder="Enter title">
   </div>
 
   <div class="input-section">
-    <label for="content">Content:</label>
-    <input type="text" id="content" placeholder="Enter content">
+    <label class="label-section" for="content">Content:</label>
+    <textarea class="div-section" cols="190" id="content" placeholder="Enter content">
+      </textarea>
   </div>
 
   <div class="input-section">
-    <label for="image">Image:</label>
+    <label class="label-section" for="image">Image:</label>
     <input type="file" id="image" accept="image/*">
   </div>
 
   <div class="input-section">
-    <label for="video">Video:</label>
+    <label class="label-section" for="video">Video:</label>
     <input type="file" id="video" accept="video/*">
   </div>
-
+</div>
   <div class="button-section">
     <button onclick="submitForm()">Submit</button>
   </div>
@@ -62,7 +64,7 @@
         imagePreview.style.marginTop = '10px';
         newData += "<p>Image:</p>";
         newData += "<div class='card-body-image'>" +
-          "<img src='" + imagePreview.src + "' alt='Selected Image'>" +
+          "<img class='preview' src='" + imagePreview.src + "' alt='Selected Image'>" +
           "</div>";
       }
 
@@ -76,7 +78,7 @@
         videoPreview.style.marginTop = '20px';
         newData += "<p>Video:</p>";
         newData += "<div class='card-body-video'>" +
-          "<video src='" + videoPreview.src + "' controls autoplay></video>" +
+          "<video class='video-preview' src='" + videoPreview.src + "' controls autoplay></video>" +
           "</div>";
       }
 
