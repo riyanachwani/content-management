@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: rgb(172, 227, 238);
-    }
+}
 
 h1 {
     text-align: center;
@@ -69,7 +69,7 @@ h1 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin-bottom: 20px;
-    background-image: url("download.jpeg");
+    background-image: url("background.jpeg");
     /* Replace with the path to yourimage */
     background-size: cover;
     background-position: center;
