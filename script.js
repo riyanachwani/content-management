@@ -24,7 +24,7 @@ function submitForm() {
         "<img class='preview' src='" + imagePreview.src + "' alt='Selected Image'>" +
         "</div>";
     }
-
+    
     if (video) {
       var videoPreview = document.createElement('video');
       videoPreview.src = URL.createObjectURL(video);
