@@ -7,7 +7,7 @@
 Content Management Tool
 
 ## `Description`
-Content Management Tool is a web-based content management system developed as Task 1 for the **Bharat Intern** internship program. It allows users to manage and publish contents easily. It allows users to add text, images and videos required to create a blog. 
+The Content Management Tool is a user-friendly web application developed program. It provides an intuitive interface for managing and publishing various types of content. Users can effortlessly add and organize text, images, and videos, making it easy to create and maintain engaging blog posts.
 
 ## `Tech Stack Used`
 <li>HTML</li>
