@@ -7,7 +7,7 @@
 Content Management Tool
 
 ## `Description`
-The Content Management Tool is a user-friendly web application developed program. It provides an intuitive interface for managing and publishing various types of content. Users can effortlessly add and organize text, images, and videos, making it easy to create and maintain engaging blog posts.
+The Content Management Tool is a dynamic web application aimed at simplifying the content creation and management process. Designed to handle various content types, this tool allows users to effortlessly upload and arrange text, images, and videos, making it an ideal solution for building and maintaining engaging blog posts or digital content platforms.
 
 ## `Tech Stack Used`
 <li>HTML</li>
